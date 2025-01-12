@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Rubik", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.heading {
+  /* mt-4 text-2xl */
+  margin-top: mt-4;
+  text-size-adjust: text-2xl;
+  /* text-size-adjust: 2; */
+}
+
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+  animation: fadeOut 1s ease-in-out forwards;
+}
+.logo {
+  width: 150px;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.first {
+  color: #f9a123;
+}
+.second {
+  color: #41444b;
+}
+.bg-first {
+  background-color: #f9a123;
+}
+.bg-second {
+  background-color: #41444b;
+}
+.homepage {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.horizontal-slider {
+  position: relative;
+  height: 5px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.track {
+  position: absolute;
+  height: 50%;
+  background-color: #4040413a; /* Blue */
+  border-radius: 5px;
+}
+.track.active-track {
+  background-color: #f63b3b; /* Red for the track between thumbs */
+}
+
+.thumb {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #f63b3b; /* Blue */
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  top: -8px;
+}
+
+.thumb-value {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3b82f6; /* Blue */
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+}
