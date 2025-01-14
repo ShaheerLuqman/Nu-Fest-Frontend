@@ -10,21 +10,19 @@ export const DataProvider = ({ children }) => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    const fetchCompetitions = async () => {
-      try {
-        const response = await axios.get("/api/competitions/getcompetitions");
-        setCompetitions(response.data);
-        setCompetitionsLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setCompetitionsLoading(false);
-      }
-    };
-
     fetchCompetitions();
     getEvents();
   }, []);
-
+  const fetchCompetitions = async () => {
+    try {
+      const response = await axios.get("/api/competitions/getcompetitions");
+      setCompetitions(response.data);
+      setCompetitionsLoading(false);
+    } catch (err) {
+      setError(err.message);
+      setCompetitionsLoading(false);
+    }
+  };
   const getEvents = async () => {
     try {
       const response = await axios.get("/api/events/getevents");
@@ -59,3 +57,4 @@ export const DataProvider = ({ children }) => {
     </DataContext.Provider>
   );
 };
+

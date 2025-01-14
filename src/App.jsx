@@ -11,6 +11,7 @@ import Footer from "./components/UI/Footer.jsx";
 
 function App() {
   axios.defaults.baseURL = `${import.meta.env.VITE_BASEURL}`;
+  console.log(axios.defaults.baseURL);
   return (
     <div>
       <DataProvider>
