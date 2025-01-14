@@ -10,9 +10,9 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
     setDrawerOpen(open);
   };
 
-  useEffect(()=>{
-    console.log(categories)
-  },[])
+  useEffect(() => {
+    console.log(categories);
+  }, []);
 
   return (
     <>
@@ -24,25 +24,16 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-2xl font-bold mb-6 text-center">Categories</h1>
-        {/* <motion.button
-          className={
-            catName === "All"
-              ? "text-white bg-orange-400 p-3 rounded-lg w-full  transition duration-300"
-              : "text-orange-400 p-3 rounded-lg w-full  transition duration-300"
-          }
-          onClick={() => onCategoryClick("ANY")}
-          whileHover={{ scale: 1.05 }}
-        >
-          ALL
-        </motion.button> */}
+        <h1 className="text-2xl second font-bold mb-6 text-center">
+          Categories
+        </h1>
         {categories.map((category) => (
           <motion.button
             key={category.id}
             className={
               catName === category.name
-                ? "text-white bg-orange-400 p-3 rounded-lg w-full  transition duration-300"
-                : "text-orange-400 p-3 rounded-lg w-full  transition duration-300"
+                ? "second p-3 rounded-lg w-full font-semibold transition duration-300"
+                : "first p-3 rounded-lg w-full  font-semibold transition duration-300"
             }
             onClick={() => onCategoryClick(category.name)}
             whileHover={{ scale: 1.05 }}
@@ -53,7 +44,7 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
       </motion.div>
 
       {/* Mobile View */}
-      <div className="md:hidden">
+      {/* <div className="md:hidden">
         <IconButton onClick={toggleDrawer(true)}>
           <MenuIcon fontSize="large" />
         </IconButton>
@@ -66,31 +57,18 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-2xl font-bold mb-6 text-center">Categories</h1>
-            {/* <motion.button
-              className={
-                catName === "All"
-                  ? "text-white bg-orange-400 p-3 rounded-lg w-full  transition duration-300"
-                  : "text-orange-400 p-3 rounded-lg w-full  transition duration-300"
-              }
-              onClick={() => {
-                onCategoryClick("ANY");
-                setDrawerOpen(false); // Close drawer after click
-              }}
-              whileHover={{ scale: 1.05 }}
-            >
-              ALL
-            </motion.button> */}
+
             {categories.map((category) => (
               <motion.button
                 key={category.id}
                 className={
                   catName === category.name
-                    ? "text-white bg-orange-400 p-3 rounded-lg w-full  transition duration-300"
-                    : "text-orange-400 p-3 rounded-lg w-full  transition duration-300"
+                    ? "second p-3 rounded-lg w-full  transition duration-300"
+                    : "first p-3 rounded-lg w-full  transition duration-300"
                 }
                 onClick={() => {
                   onCategoryClick(category.name);
-                  setDrawerOpen(false); // Close drawer after click
+                  setDrawerOpen(false);
                 }}
                 whileHover={{ scale: 1.05 }}
               >
@@ -99,7 +77,7 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
             ))}
           </motion.div>
         </Drawer>
-      </div>
+      </div> */}
     </>
   );
 };

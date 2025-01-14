@@ -94,9 +94,6 @@ const Filters = (props) => {
         
       >
         <div className="p-4">
-          {/* <h2 className="text-lg font-semibold text-gray-800 mb-2">
-            Home / Collections / END OF SEASON SALE
-          </h2> */}
           <p className="text-md text-black p-4 pb-2 text-lg font-semibold">
             Filters
           </p>

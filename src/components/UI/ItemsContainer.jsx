@@ -1,12 +1,18 @@
-import React, { useContext, useEffect, useState } from 'react';
-import Card from './Card.jsx';
+import React, { useContext, useEffect, useState } from "react";
+import Card from "./Card.jsx";
 //import itemContext from '../../context/createContext.js';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const ItemsContainer = ({ category, isFiltersOpen, setIsFiltersOpen, selectedPriceRange, searchQuery, items}) => {
+const ItemsContainer = ({
+  category,
+  isFiltersOpen,
+  setIsFiltersOpen,
+  selectedPriceRange,
+  searchQuery,
+  items,
+}) => {
   //const [items, setItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-
 
   const itemsPerPage = 20;
   //const { getItems, itemsLoading } = useContext(itemContext);
@@ -15,7 +21,6 @@ const ItemsContainer = ({ category, isFiltersOpen, setIsFiltersOpen, selectedPri
   const toggleMenu = () => {
     setIsFiltersOpen(!isFiltersOpen);
   };
-
 
   const totalPages = 2;
 
@@ -26,7 +31,7 @@ const ItemsContainer = ({ category, isFiltersOpen, setIsFiltersOpen, selectedPri
   return (
     <div className="px-2 lg:max-w-[70%] xl:max-w-[75%] 2xl:max-w-[80%]">
       {/* Pagination Info */}
-      <div className="mb-4 p-2 bg-gray-100 text-gray-700 border border-gray-300 rounded shadow-sm flex justify-between items-center">
+      <div className="mb-4 p-2 bg-gray-100 second border border-gray-300 rounded shadow-sm flex justify-between items-center">
         <button
           className="lg:hidden bg-black text-white px-4 py-1 rounded"
           onClick={toggleMenu}
@@ -34,29 +39,20 @@ const ItemsContainer = ({ category, isFiltersOpen, setIsFiltersOpen, selectedPri
           Apply Filters
         </button>
         <p className="text-center">
-          Showing page <span className="font-semibold">{currentPage}</span> of{' '}
+          Showing page <span className="font-semibold">{currentPage}</span> of{" "}
           <span className="font-semibold">{totalPages}</span>
         </p>
       </div>
 
       {/* Items Grid */}
-      {/* {itemsLoading ? (
-        <div className="flex flex-col justify-center items-center h-32">
-          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-gray-800"></div>
-          <p className="ml-4 text-gray-600">
-            {loadingTimeout
-              ? 'Loading is taking longer than expected. Please refresh the page or try again later.'
-              : 'Loading items...'}
-          </p>
-        </div>
-      ) : ( */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4">
-          {items.map((item) => (
-            <a key={item.id} to={`/shop/item/${item.name}`} state={{ item }}>
-              <Card key={item.id} card={item} />
-            </a>
-          ))}
-        </div>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4">
+        {items.map((item) => (
+          <a key={item.id} to={`/shop/item/${item.name}`} state={{ item }}>
+            <Card key={item.id} card={item} />
+          </a>
+        ))}
+      </div>
       {/* )} */}
 
       {/* Pagination Controls */}
@@ -67,7 +63,9 @@ const ItemsContainer = ({ category, isFiltersOpen, setIsFiltersOpen, selectedPri
               <button
                 onClick={() => handlePageChange(page + 1)}
                 className={`py-1 px-3 rounded ${
-                  currentPage === page + 1 ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                  currentPage === page + 1
+                    ? "bg-first text-white"
+                    : "bg-gray-200"
                 }`}
               >
                 {page + 1}

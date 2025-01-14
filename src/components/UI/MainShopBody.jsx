@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
-import Filters from './Filters.jsx'
-import Itemscontainer from './ItemsContainer.jsx'
-import DataContext from '../../context/createContext.js';
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Filters from "./Filters.jsx";
+import Itemscontainer from "./ItemsContainer.jsx";
+import DataContext from "../../context/createContext.js";
 
 const Mainbody = ({ searchQuery }) => {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
@@ -52,12 +52,6 @@ const Mainbody = ({ searchQuery }) => {
       price: 8999,
       stock: 0,
     },
-    // {
-    //   name: "Puma Shoes 2",
-    //   image: "https://farm7.staticflickr.com/6089/6115759179_86316c08ff_z_d.jpg",
-    //   price: 5999,
-    //   stock: 10,
-    // },
   ];
 
   return (

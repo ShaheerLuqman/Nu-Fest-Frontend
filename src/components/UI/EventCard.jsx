@@ -22,7 +22,7 @@ const EventCard = ({ event }) => {
       {/* Name Section */}
       <div className="mt-3 px-3 pb-3">
         <div className="flex justify-center items-center flex-wrap">
-          <span className="text-lg font-bold text-[#f9a123]">{event_name}</span>
+          <span className="text-lg font-bold first">{event_name}</span>
         </div>
       </div>
     </div>

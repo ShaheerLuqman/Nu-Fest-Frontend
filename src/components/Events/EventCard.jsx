@@ -7,7 +7,7 @@ const EventCard = ({ event }) => {
   const remainingTickets = Math.max(
     event.no_of_tickets - event.current_rows,
     0
-  ); // Ensure non-negative values
+  );
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -32,23 +32,23 @@ const EventCard = ({ event }) => {
           alt={event.event_name}
           className="w-full max-w-xs h-48 object-cover rounded-md mb-4"
         />
-        <h3 className="text-2xl font-semibold text-[#FFA500] mb-4">
+        <h3 className="text-2xl font-semibold first mb-4">
           {event.event_name}
         </h3>
-        <div className="text-lg font-semibold text-[#FFA500] mb-6">
+        <div className="text-lg font-semibold first mb-6 first">
           <span className="text-3xl font-bold text-orange-500">
             {remainingTickets || 0}
           </span>
-          <br /> Left!
+          <br /> Left
         </div>
         <Button
           variant="contained"
           size="small"
           sx={{
-            backgroundColor: "orange",
+            backgroundColor: "#F39E60",
             color: "white",
             "&:hover": {
-              backgroundColor: "darkorange",
+              backgroundColor: "#41444B",
             },
           }}
           onClick={handleClickOpen}

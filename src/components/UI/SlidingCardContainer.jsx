@@ -1,39 +1,49 @@
-import React, { useRef } from "react";
-import CompetitionCard from "./CompetitionCard.jsx";
-import { Link } from "react-router-dom";
+import React, { useRef, useEffect, useState } from "react";
+import CompetitionCard from "../Competitions/CompetitionCard.jsx";
 
 const SlidingCardContainer = ({ competitions }) => {
   const containerRef = useRef(null);
+  const [cardWidth, setCardWidth] = useState(0);
 
-  // Scroll handler
+  // Calculate card width dynamically after the component mounts
+  useEffect(() => {
+    if (containerRef.current) {
+      const firstCard = containerRef.current.firstChild;
+      setCardWidth(firstCard ? firstCard.offsetWidth + 16 : 0); // Add margin if present
+    }
+  }, [competitions]); // Recalculate when competitions change
+
   const scrollContainer = (direction) => {
-    const cardWidth = containerRef.current.firstChild.offsetWidth + 16; // Card width + margin
-    if (direction === "left") {
-      if (containerRef.current.scrollLeft == 0) {
-        containerRef.current.scrollBy({
-          left: containerRef.current.scrollWidth,
-          behavior: "smooth",
-        });
+    if (containerRef.current) {
+      if (direction === "left") {
+        if (containerRef.current.scrollLeft === 0) {
+          containerRef.current.scrollBy({
+            left: containerRef.current.scrollWidth,
+            behavior: "smooth",
+          });
+        } else {
+          containerRef.current.scrollBy({
+            left: -cardWidth,
+            behavior: "smooth",
+          });
+        }
       } else {
-        containerRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" });
-      }
-    } else {
-      if (
-        containerRef.current.scrollLeft + containerRef.current.clientWidth >=
-        containerRef.current.scrollWidth
-      ) {
-        containerRef.current.scrollBy({
-          left: -containerRef.current.scrollWidth,
-          behavior: "smooth",
-        });
-      } else {
-        containerRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
+        if (
+          containerRef.current.scrollLeft + containerRef.current.clientWidth >=
+          containerRef.current.scrollWidth
+        ) {
+          containerRef.current.scrollBy({
+            left: -containerRef.current.scrollWidth,
+            behavior: "smooth",
+          });
+        } else {
+          containerRef.current.scrollBy({
+            left: cardWidth,
+            behavior: "smooth",
+          });
+        }
       }
     }
-
-    // console.log(containerRef.current.scrollLeft);
-    // console.log(containerRef.current.scrollWidth);
-    // console.log(containerRef.current.scrollLeft + containerRef.current.clientWidth);
   };
 
   return (
@@ -41,7 +51,7 @@ const SlidingCardContainer = ({ competitions }) => {
       {/* Left Arrow */}
       <button
         onClick={() => scrollContainer("left")}
-        className="absolute left-0 top-1/2 transform text-white -translate-y-1/2 bg-[#f9a123] hover:bg-orange-600 rounded-full p-2 shadow-md z-10"
+        className="absolute left-0 top-1/2 transform text-white -translate-y-1/2 bg-first hover:bg-orange-600 rounded-full p-2 shadow-md z-10"
       >
         ◀
       </button>
@@ -49,13 +59,13 @@ const SlidingCardContainer = ({ competitions }) => {
       {/* Cards Container */}
       <div
         ref={containerRef}
-        className="flex overflow-hidden space-x-4 p-4 w-full "
+        className="flex overflow-hidden space-x-4 p-4 w-full"
         style={{
           scrollBehavior: "smooth",
         }}
       >
         {competitions.map((competition, index) => (
-          <div key={index} className="shrink-0 w-full md:w-[32%] mmd:w-[300px]">
+          <div key={index} className="shrink-0 w-[325px] lg:w-[325px]">
             <CompetitionCard competition={competition} />
           </div>
         ))}

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import DataContext from "./createContext.js";
 
-
 export const DataProvider = ({ children }) => {
   const [competitions, setCompetitions] = useState([]);
   const [competitionsLoading, setCompetitionsLoading] = useState(true);
@@ -24,7 +23,6 @@ export const DataProvider = ({ children }) => {
 
     fetchCompetitions();
     getEvents();
-
   }, []);
 
   const getEvents = async () => {
@@ -61,4 +59,3 @@ export const DataProvider = ({ children }) => {
     </DataContext.Provider>
   );
 };
-

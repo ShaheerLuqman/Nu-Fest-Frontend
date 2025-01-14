@@ -6,7 +6,7 @@ const SponsorCarousel = ({ sponsors }) => {
   const sponsorList = [...sponsors, ...sponsors];
 
   return (
-    <div className="w-full bottom-0 my-4  bg-opacity-10 py-4 rounded-md shadow-lg">
+    <div className="w-full bottom-0 my-4  bg-transparent py-4 rounded-md ">
       <Marquee speed={50} gradient={false}>
         <div className="flex items-center space-x-8 justify-center">
           {sponsorList.map((sponsor, index) => (
@@ -16,8 +16,8 @@ const SponsorCarousel = ({ sponsors }) => {
               alt={`Sponsor-${index}`}
               className="rounded-lg shadow-md "
               style={{
-                width: "12.5rem", // Dynamic width based on viewport width
-                height: "20vh", // Dynamic height based on viewport height
+                width: "12.5rem",
+                height: "20vh",
                 margin: "1rem 2rem",
                 gap: "8rem",
                 objectFit: "cover",

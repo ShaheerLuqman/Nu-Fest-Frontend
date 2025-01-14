@@ -4,7 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
-    <div className="bg-white p-4 shadow-md">
+    <div className="bg-transparent p-4 ">
       <div className="flex items-center justify-center">
         <TextField
           variant="outlined"

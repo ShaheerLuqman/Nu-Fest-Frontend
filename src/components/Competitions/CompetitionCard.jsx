@@ -19,31 +19,38 @@ const CompetitionCard = ({ competition }) => {
   return (
     <>
       <motion.div
-        className="bg-white shadow-lg rounded-lg w-full p-6 flex flex-col justify-between "
+        className="bg-white shadow-lg drop-shadow rounded-lg w-full p-4 sm:p-6 flex flex-col justify-between" // Adjusted padding for smaller screens
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
         whileHover={{ scale: 1.05 }}
       >
-        <div className="w-full flex justify-center align-top flex-col">
-          <h3 className="text-xl font-semibold flex align-top justify-center">
+        <div className="w-full">
+          <img
+            src={competition.imageurl}
+            alt="Competition"
+            className="rounded-2xl w-full h-40 sm:h-48 object-fill" // Adjusted image size for mobile view
+          />
+        </div>
+
+        <div className="w-full flex justify-center flex-col lg:mt-3 sm:mt-2">
+          <h3 className="text-lg sm:text-xl font-semibold text-center mt-2 second">
             {competition.competition_name}
           </h3>
-          {/* <p className="mt-2 text-gray-500">
-            Date: {new Date(competition.date).toLocaleDateString()}
-          </p> */}
         </div>
 
         {/* Align the button at the bottom of the card */}
-        <div className="mt-5 flex justify-center ">
+        <div className="mt-2 sm:mt-5 flex justify-center ">
           <Button
             variant="contained"
             sx={{
-              backgroundColor: "orange", // Orange background
-              color: "white", // White text
+              backgroundColor: "white", // Orange background
+              color: "#f9a123", // White text
               "&:hover": {
-                backgroundColor: "darkorange", // Darker orange on hover
+                backgroundColor: "#f9a123",
+                color: "white", // Darker orange on hover
               },
+              fontWeight: "600",
             }}
             onClick={handleClickOpen} // Open modal on button click
           >

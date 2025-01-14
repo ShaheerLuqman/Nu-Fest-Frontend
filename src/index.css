@@ -28,6 +28,18 @@
   animation: scaleUp 1s ease-in-out;
 }
 
+.first {
+  color: #f9a123;
+}
+.second {
+  color: #41444b;
+}
+.bg-first {
+  background-color: #f9a123;
+}
+.bg-second {
+  background-color: #41444b;
+}
 .homepage {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
