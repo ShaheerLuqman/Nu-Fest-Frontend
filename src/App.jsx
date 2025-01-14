@@ -10,7 +10,7 @@ import Navbar from "./components/UI/Navbar.jsx";
 import Footer from "./components/UI/Footer.jsx";
 
 function App() {
-  axios.defaults.baseURL = "http://localhost:5000";
+  axios.defaults.baseURL = `${import.meta.env.VITE_BASEURL}`;
   return (
     <div>
       <DataProvider>
