@@ -74,8 +74,8 @@ function Home() {
 
           {/* <CardDetails /> */}
           {/* <div className="my-10"> </div>
-          <SponsorCarousel sponsors={sponsors} />
-        </div> */}
+          <SponsorCarousel sponsors={sponsors} /> */}
+        </div>
       )}
     </>
   );
