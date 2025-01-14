@@ -97,7 +97,7 @@ const Navbar = ({ setSearchQuery }) => {
             >
               COMPETITIONS
             </Link>
-            <Link
+            {/* <Link
               onClick={() => setIsBottomMenuOpen(false)}
               to="/events"
               className={`p-2 bg-opacity-90 rounded-xl font-semibold px-4 ${
@@ -105,7 +105,7 @@ const Navbar = ({ setSearchQuery }) => {
               } hover:text-orange-600 duration-150 no-underline`}
             >
               EVENTS
-            </Link>
+            </Link> */}
             <Link
               to="/"
               className={`p-2 bg-opacity-90 rounded-xl font-semibold px-4 mb-4 ${
@@ -122,3 +122,4 @@ const Navbar = ({ setSearchQuery }) => {
 };
 
 export default Navbar;
+
