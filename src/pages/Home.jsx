@@ -73,9 +73,9 @@ function Home() {
           {/* <EventsContainer events={events} /> */}
 
           {/* <CardDetails /> */}
-          <div className="my-10"> </div>
+          {/* <div className="my-10"> </div>
           <SponsorCarousel sponsors={sponsors} />
-        </div>
+        </div> */}
       )}
     </>
   );
