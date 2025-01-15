@@ -8,6 +8,7 @@ const CompetitionCard = ({ competition }) => {
 
   // Function to open the modal
   const handleClickOpen = () => {
+    window.scrollTo(0, 0); // Scroll to the top when opening the modal
     setOpen(true);
   };
 
