@@ -33,59 +33,59 @@ function Home() {
     },
   ];
 
-  const SplashFalse = () => {
-    setShowSplash(false);
-  };
-
   const [showSplash, setShowSplash] = useState(true);
+
   useEffect(() => {
-    const timer = setTimeout(() => {
+    // Check localStorage for the splash screen flag
+    const hasSeenSplash = localStorage.getItem("hasSeenSplash");
+
+    if (hasSeenSplash) {
+      // If flag exists, skip the splash screen
       setShowSplash(false);
-    }, 2000);
-    return () => clearTimeout(timer) && SplashFalse();
+    } else {
+      // If flag doesn't exist, show the splash screen
+      const timer = setTimeout(() => {
+        setShowSplash(false);
+        localStorage.setItem("hasSeenSplash", "true"); // Set the flag in localStorage
+      }, 3000);
+
+      // Cleanup timeout on component unmount
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   return (
     <>
-      {showSplash ? (
+      {/* {showSplash ? (
         <div className="relative splash-screen">
           <img
             alt="Logo"
             src="../logo.svg"
-            className="z-0 absolute inset-0 w-full h-full object-cover "
+            className="z-0 absolute inset-0 w-full h-full object-cover"
           />
-          {}
         </div>
-      ) : (
-        <div className="homepage">
-          <div className="bg-first second">
-            <Marquee>
-              <span className="second text-xl tracking-wide">
-                ENTRANCE FEES APPLY FOR NON-REGISTERED ATTENDEES.
-              </span>
-            </Marquee>
-          </div>
-
-          {/* <Navbar /> */}
-          <div className="z-0 my-16 ">
-            <Logo />
-          </div>
-          <div className="flex justify-center items-center w-full">
-            <h2 className="second font-semibold mt-4 text-2xl">
-              FEATURED COMPETITIONS
-            </h2>
-          </div>
-          <SlidingCardContainer competitions={competitions} />
-          {/* <div className="flex justify-center items-center w-full">
-            <h2 className=" mt-4 text-2xl second font-semibold">EXPERIENCES</h2>
-          </div> */}
-          {/* <EventsContainer events={events} /> */}
-
-          {/* <CardDetails /> */}
-          {/* <div className="my-10"> </div>
-          <SponsorCarousel sponsors={sponsors} /> */}
+      ) : ( */}
+      <div className="homepage">
+        <div className="bg-first second">
+          <Marquee>
+            <span className="second text-lg tracking-widest">
+              ENTRANCE FEES APPLY FOR NON-REGISTERED ATTENDEES.
+            </span>
+          </Marquee>
         </div>
-      )}
+
+        <div className="z-0 my-16">
+          <Logo />
+        </div>
+        <div className="flex justify-center items-center w-full">
+          <h2 className="second font-semibold mt-4 text-2xl">
+            FEATURED COMPETITIONS
+          </h2>
+        </div>
+        <SlidingCardContainer competitions={competitions} />
+      </div>
+      {/* )
+      } */}
     </>
   );
 }
