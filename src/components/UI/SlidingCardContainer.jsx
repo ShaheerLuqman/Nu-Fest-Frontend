@@ -15,6 +15,7 @@ const SlidingCardContainer = ({ competitions }) => {
 
   const scrollContainer = (direction) => {
     if (containerRef.current) {
+      const scrollAmount = cardWidth; // Use cardWidth for scrolling
       if (direction === "left") {
         if (containerRef.current.scrollLeft === 0) {
           containerRef.current.scrollBy({
@@ -23,7 +24,7 @@ const SlidingCardContainer = ({ competitions }) => {
           });
         } else {
           containerRef.current.scrollBy({
-            left: -cardWidth,
+            left: -scrollAmount, // Adjusted for mobile
             behavior: "smooth",
           });
         }
@@ -38,7 +39,7 @@ const SlidingCardContainer = ({ competitions }) => {
           });
         } else {
           containerRef.current.scrollBy({
-            left: cardWidth,
+            left: scrollAmount, // Adjusted for mobile
             behavior: "smooth",
           });
         }
@@ -47,7 +48,7 @@ const SlidingCardContainer = ({ competitions }) => {
   };
 
   return (
-    <div className="relative max-w-[90%] md:max-w-[90%] lg:max-w-screen-lg mx-auto my-4 flex justify-center">
+    <div className="relative max-w-full mx-auto my-4 flex justify-center">
       <button
         onClick={() => scrollContainer("left")}
         className="absolute left-0 top-1/2 transform text-white -translate-y-1/2 bg-first hover:bg-orange-600 rounded-full p-2 shadow-md z-10"
@@ -62,12 +63,11 @@ const SlidingCardContainer = ({ competitions }) => {
           scrollBehavior: "smooth",
         }}
       >
-        {/* Safeguard: Only map if competitions is an array */}
         {Array.isArray(competitions) && competitions.length > 0 ? (
           competitions.map((competition) => (
             <div
               key={competition.id}
-              className="shrink-0 w-[325px] lg:w-[325px]"
+              className="shrink-0 w-full sm:w-[325px] lg:w-[325px] mx-auto"
             >
               <CompetitionCard competition={competition} />
             </div>

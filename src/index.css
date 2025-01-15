@@ -122,3 +122,10 @@ body {
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
+
+@media (max-width: 768px) {
+  .sliding-card-container {
+    width: 100%; /* Adjust width to 100% for mobile */
+    height: auto; /* Remove fixed height */
+  }
+}
