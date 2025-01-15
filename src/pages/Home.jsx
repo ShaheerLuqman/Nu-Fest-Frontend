@@ -66,7 +66,7 @@ function Home() {
         </div>
       ) : ( */}
       <div className="homepage ">
-        {/* <div className="bg-first second">
+        {/* <div className="bg-transparent second">
           <Marquee>
             <span className="second text-lg tracking-widest">
               ENTRANCE FEES APPLY FOR NON-REGISTERED ATTENDEES.
@@ -75,11 +75,11 @@ function Home() {
         </div> */}
 
         <div className="z-0 my-16 flex justify-center">
-          <img 
-            alt="Logo" 
-            src="https://i.ibb.co/DD9m7Fj/Logo.png" 
+          <img
+            alt="Logo"
+            src="https://i.ibb.co/DD9m7Fj/Logo.png"
             className="w-80 h-auto"
-            style={{ background: 'none' }} 
+            style={{ background: "none" }}
           />
         </div>
         <div className="flex justify-center items-center w-full">
@@ -89,6 +89,14 @@ function Home() {
         </div>
         <SlidingCardContainer competitions={competitions} />
       </div>
+      {/* <div className="flex justify-center items-center w-full">
+            <h2 className=" mt-4 text-2xl second font-semibold">EXPERIENCES</h2>
+          </div> */}
+      {/* <EventsContainer events={events} /> */}
+
+      {/* <CardDetails /> */}
+      {/* <div className="my-10"> </div> */}
+      {/* <SponsorCarousel sponsors={sponsors} /> */}
       {/* )
       } */}
     </>

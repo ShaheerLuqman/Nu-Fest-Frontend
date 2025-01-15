@@ -4,16 +4,32 @@ import RightSide from "../components/Competitions/RightSide.jsx";
 import DataContext from "../context/createContext.js";
 
 const Competitions = () => {
+  // const imageUrls = [
+  //   "../all.svg",
+  //   // "https://i.imgur.com/LZK8IxO.png",
+  //   // "https://i.imgur.com/0swKNbC.png",
+  //   // "https://i.imgur.com/9kAuDYv.png",
+  //   // "https://i.imgur.com/WBLtVDe.png",
+  //   // "https://i.imgur.com/f9Tm6V0.png",
+  //   // "https://i.imgur.com/TdLnEse.png",
+  //   // "https://ibb.co/prfpDSr",
+  //   "../esports.svg",
+  //   "https://ibb.co/NKS6mJ5",
+  //   "https://ibb.co/pQrm7Ry",
+  //   "https://ibb.co/26ZvzZ1",
+  //   "https://ibb.co/cb5bw1z",
+  //   "https://ibb.co/nfkPRtG",
+  // ];
+
   const imageUrls = [
     "../all.svg",
-    "https://i.imgur.com/LZK8IxO.png",
-    "https://i.imgur.com/0swKNbC.png",
-    "https://i.imgur.com/9kAuDYv.png",
-    "https://i.imgur.com/WBLtVDe.png",
-    "https://i.imgur.com/f9Tm6V0.png",
-    "https://i.imgur.com/TdLnEse.png",
+    "../esports.svg",
+    "../sports.svg",
+    "../extracurricular.svg",
+    "../demanding.svg",
+    "../digital.svg",
+    "../literary.svg",
   ];
-
   const categories = [
     "All",
     "Esports",

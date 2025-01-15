@@ -18,8 +18,8 @@ const Navbar = ({ setSearchQuery, allow }) => {
             <img
               // src="../../NU"
               src="../NU-FEST.png"
-              alt="FarFits Logo"
-              className="h-20 w-auto object-contain"
+              alt="NUFEST LOGO"
+              className="h-[12vh] w-[10vw] object-contain"
             />
           </Link>
         </div>
