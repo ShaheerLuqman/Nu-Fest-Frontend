@@ -66,13 +66,13 @@ function Home() {
         </div>
       ) : ( */}
       <div className="homepage ">
-        <div className="bg-first second">
+        {/* <div className="bg-first second">
           <Marquee>
             <span className="second text-lg tracking-widest">
               ENTRANCE FEES APPLY FOR NON-REGISTERED ATTENDEES.
             </span>
           </Marquee>
-        </div>
+        </div> */}
 
         <div className="z-0 my-16">
           <Logo />

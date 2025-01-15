@@ -60,7 +60,8 @@ const Footer = () => {
                 style={{ textDecoration: "none" }}
               >
                 <i className="fa-solid fa-location-dot fa-xl hover:text-orange-200 mb-4"></i>
-                <span>FAST NUCES, Karachi</span>
+                <span>FAST NUCES, Karachi<br />
+                St-4, Sector 17-D, NH 5, Karachi, Karachi City, Sindh</span>
               </a>
             </div>
           </div>
@@ -72,12 +73,12 @@ const Footer = () => {
             </h4>
             <ul className="list-none space-y-2 text-sm sm:text-base flex flex-col items-center">
               <li className="flex items-center gap-2">
-                <ScreenSearchDesktopIcon className="hover:text-orange-200" />
-                <span>1234-567890</span>
+                <LocalPhoneIcon className="hover:text-orange-200" />
+                <span>+92 331 2317830</span>
               </li>
               <li className="flex items-center gap-2">
                 <LocalPhoneIcon className="hover:text-orange-200" />
-                <span>1234-567890</span>
+                <span>+92 348 0379466</span>
               </li>
               <li className="flex items-center gap-2">
                 <MailOutlineIcon className="hover:text-orange-200" />
@@ -96,17 +97,19 @@ const Footer = () => {
                 href="https://www.facebook.com/NUFESTV2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer text-white hover:text-orange-200 transition-colors"
+                className="cursor-pointer text-white hover:text-orange-200 transition-colors flex items-center text-sm sm:text-base"
               >
                 <i className="fa-brands fa-facebook fa-2x"></i>
+                <span className="ml-2">Facebook</span>
               </a>
               <a
                 href="https://www.instagram.com/nu__fest/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer text-white hover:text-orange-200 transition-colors"
+                className="cursor-pointer text-white hover:text-orange-200 transition-colors flex items-center text-sm sm:text-base"
               >
                 <i className="fa-brands fa-instagram fa-2x"></i>
+                <span className="ml-2">Instagram</span>
               </a>
             </div>
           </div>
