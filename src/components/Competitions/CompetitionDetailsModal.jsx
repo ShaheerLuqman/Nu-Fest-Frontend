@@ -16,7 +16,7 @@ const CompetitionDetailsModal = ({ competition, open, onClose }) => {
       {/* Header Section with Icon and Title */}
       <DialogTitle className="flex items-center w-full">
         <div className="space-y-2 w-full flex justify-center items-center">
-          <h2 className="font-bold text-3xl second">
+          <h2 className="font-bold text-3xl second text-center">
             {competition.competition_name}
           </h2>
           <Button
@@ -82,7 +82,7 @@ const CompetitionDetailsModal = ({ competition, open, onClose }) => {
                 to={`/${competition.competition_name}/register`}
                 state={{ entityType: "competition", entityObject: competition }}
               >
-                <button className="hover:bg-orange-600 bg-first rounded-2xl transition duration-300 opacity-90 items-center flex justify-center text-white sm:px-2 py-2 font-bold w-full sm:w-[12vw]">
+                <button className="hover:bg-orange-600 bg-first rounded-2xl transition duration-300 opacity-90 items-center flex justify-center text-white py-2 font-bold w-[150px] min-w-[150px] px-4">
                   REGISTER
                 </button>
               </Link>
