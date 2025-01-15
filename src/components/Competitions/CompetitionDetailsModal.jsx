@@ -29,10 +29,9 @@ const CompetitionDetailsModal = ({ competition, open, onClose }) => {
               position: "absolute",
               right: "10px",
               top: "10px",
-              cursor: "pointer",
             }}
           >
-            <AiOutlineCloseCircle size={24} />
+            <AiOutlineCloseCircle size={24} className="cursor-pointer" />
           </Button>
         </div>
       </DialogTitle>
