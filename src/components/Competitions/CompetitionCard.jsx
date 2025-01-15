@@ -29,7 +29,8 @@ const CompetitionCard = ({ competition }) => {
           <img
             src={competition.imageurl}
             alt="Competition"
-            className="rounded-2xl w-full h-40 sm:h-48 object-fill" // Adjusted image size for mobile view
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }} // Set width and height to 100% for a square area
+            className="rounded-2xl" // Removed height class to allow styling to take effect
           />
         </div>
 
