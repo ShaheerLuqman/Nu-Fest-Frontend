@@ -11,7 +11,7 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
   };
 
   useEffect(() => {
-    console.log(categories);
+    // console.log(categories);
   }, []);
 
   return (

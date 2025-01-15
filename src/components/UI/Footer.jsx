@@ -2,11 +2,13 @@ import React from "react";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import HelpIcon from "@mui/icons-material/Help";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
 
 const Footer = () => {
   return (
     <footer className="bg-second opacity-95 pb-3 pt-10">
-      <div className="container mx-auto  px-6">
+      <div className="container mx-auto px-6 w-full">
         {/* Title Section */}
         <div className="text-center text-white font-extrabold flex flex-col w-full justify-center items-center gap-4">
           <h2 className="drop-shadow-md first text-4xl sm:text-5xl lg:text-6xl">
@@ -15,42 +17,65 @@ const Footer = () => {
           <h3 className="text-lg sm:text-xl lg:text-2xl">STAY TUNED</h3>
         </div>
 
-        {/* Location | Contacts | Socials */}
-        <div className="mt-10 w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-white text-sm max-w-4xl mx-auto">
-            {/* Location */}
-            <div className="flex justify-center flex-col">
+        {/* Separator */}
+        <div className="my-2 border-t border-gray-500 my-4"></div>
+
+        {/* Headings Row */}
+        {/* <div className="hidden md:flex  font-extrabold text-lg  lg:text-2xl md:justify-around text-center text-white font-extrabold w-full  items-center gap-4">
+          <h2 className="text-white text-xl font-semibold">LOCATION</h2>
+          <h2 className="text-white text-xl font-semibold">CONTACTS</h2>
+          <h2 className="text-white text-xl font-semibold">SOCIALS</h2>
+        </div> */}
+        <div className="hidden text-center md:flex text-white font-bold w-full justify-around items-center gap-x-4 mt-4">
+          {/* <h2 className="drop-shadow-md first text-4xl sm:text-5xl lg:text-6xl">
+            SOCIAL EVENT YET TO BE REVEALED
+          </h2> */}
+          <h3 className="text-md ">LOCATION</h3>
+          <h3 className="text-md ">CONTACTS</h3>
+          <h3 className="text-md ">SOCIALS</h3>
+        </div>
+
+        {/* Location | Contacts | Socials Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-white text-sm max-w-4xl mx-auto mt-5">
+          {/* Location Section */}
+          <div className="flex flex-col items-center justify-center text-center">
+            <h4 className="text-xl font-semibold mb-4 md:hidden">Location</h4>
+            <div className="flex flex-col items-center ">
               <a
                 href="https://maps.app.goo.gl/pfWWMtpggvajarKn6"
-                className="flex items-center gap-2 flex flex-col text-white no-underline  transition-colors"
+                className="text-white hover:text-orange-200 transition-colors flex flex-col"
                 style={{ textDecoration: "none" }}
               >
-                <i className="fa-solid fa-location-dot fa-xl hover:text-orange-200"></i>
-                <span className="mt-2">FAST NUCES, Karachi</span>
+                {" "}
+                <i className="fa-solid fa-location-dot fa-xl hover:text-orange-200 mb-4"></i>
+                <span>FAST NUCES, Karachi</span>
               </a>
             </div>
+          </div>
 
-            {/* Contacts */}
+          {/* Contacts Section */}
+          <div className="flex flex-col items-center justify-center text-center">
+            <h4 className="text-xl font-semibold mb-4 md:hidden">Contacts</h4>
+            <ul className="list-none space-y-2 text-sm sm:text-base flex flex-col items-center">
+              <li className="flex items-center gap-2">
+                <ScreenSearchDesktopIcon className="hover:text-orange-200" />
+                <span>1234-567890</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <LocalPhoneIcon className="hover:text-orange-200" />
+                <span>1234-567890</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <MailOutlineIcon className="hover:text-orange-200" />
+                <span>nufest.nuces@nu.edu.pk</span>
+              </li>
+            </ul>
+          </div>
 
-            <div className="flex justify-center">
-              <ul className="list-none space-y-2 text-sm sm:text-base">
-                <li className="flex items-center gap-2">
-                  <LocalPhoneIcon className="hover:text-orange-200" />
-                  <span>0331-6103011</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <HelpIcon className="hover:text-orange-200" />
-                  <span>1234-567890</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <AttachEmailIcon className="hover:text-orange-200" />
-                  <span>1234-567890</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Socials */}
-            <div className="flex justify-center items-center sm:flex-row lg:flex-col gap-4">
+          {/* Socials Section */}
+          <div className="flex flex-col items-center justify-center text-center">
+            <h4 className="text-xl font-semibold mb-4 md:hidden">Socials</h4>
+            <div className="flex md:flex-col sm:flex-row md:gap-y-4  gap-x-4 items-center mb-4">
               <a
                 href="https://www.facebook.com/share/15AsteycCJ/?mibextid=wwXIfr"
                 target="_blank"

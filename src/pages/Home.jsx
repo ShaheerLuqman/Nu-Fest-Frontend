@@ -4,6 +4,7 @@ import SlidingCardContainer from "../components/UI/SlidingCardContainer.jsx";
 import SponsorCarousel from "../components/UI/SponsorCarousel.jsx";
 import Logo from "../components/UI/Logo.jsx";
 import DataContext from "../context/createContext.js";
+import Marquee from "react-fast-marquee";
 
 function Home() {
   const { competitions } = useContext(DataContext);
@@ -47,18 +48,26 @@ function Home() {
   return (
     <>
       {showSplash ? (
-        <div className="splash-screen">
+        <div className="relative splash-screen">
           <img
             alt="Logo"
-            src="../NU-FEST.png"
-            className="logo w-[100%] object-cover "
+            src="../logo.svg"
+            className="z-0 absolute inset-0 w-full h-full object-cover "
           />
           {}
         </div>
       ) : (
         <div className="homepage">
+          <div className="bg-first second">
+            <Marquee>
+              <span className="second text-xl tracking-wide">
+                ENTRANCE FEES APPLY FOR NON-REGISTERED ATTENDEES.
+              </span>
+            </Marquee>
+          </div>
+
           {/* <Navbar /> */}
-          <div className=" my-16">
+          <div className="z-0 my-16 ">
             <Logo />
           </div>
           <div className="flex justify-center items-center w-full">

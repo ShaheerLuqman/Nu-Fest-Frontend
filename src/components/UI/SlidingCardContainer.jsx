@@ -46,10 +46,8 @@ const SlidingCardContainer = ({ competitions }) => {
     }
   };
 
-  console.log(competitions); // Add this log to check the data structure
-
   return (
-    <div className="relative max-w-[90%] md:max-w-[90%] lg:max-w-screen-lg mx-auto flex justify-center">
+    <div className="relative max-w-[90%] md:max-w-[90%] lg:max-w-screen-lg mx-auto my-4 flex justify-center">
       <button
         onClick={() => scrollContainer("left")}
         className="absolute left-0 top-1/2 transform text-white -translate-y-1/2 bg-first hover:bg-orange-600 rounded-full p-2 shadow-md z-10"

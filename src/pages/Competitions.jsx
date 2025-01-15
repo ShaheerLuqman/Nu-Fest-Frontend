@@ -5,7 +5,7 @@ import DataContext from "../context/createContext.js";
 
 const Competitions = () => {
   const imageUrls = [
-    "https://i.imgur.com/dna7QDh.png",
+    "../all.svg",
     "https://i.imgur.com/LZK8IxO.png",
     "https://i.imgur.com/0swKNbC.png",
     "https://i.imgur.com/9kAuDYv.png",
@@ -21,7 +21,7 @@ const Competitions = () => {
     "Extracurricular",
     "Demanding",
     "Digital",
-    "Literacy",
+    "Literary",
   ].map((name, index) => ({
     id: index,
     name,
@@ -51,6 +51,7 @@ const Competitions = () => {
         (competition) => competition.category_name === categoryName
       );
       setFilteredCompetitions(filtered);
+      console.log(filtered);
     }
   };
 

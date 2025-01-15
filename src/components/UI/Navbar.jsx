@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom"; // Inside your Navbar
+import Marquee from "react-fast-marquee";
 
-const Navbar = ({ setSearchQuery }) => {
+const Navbar = ({ setSearchQuery, allow }) => {
   const [isBottomMenuOpen, setIsBottomMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -122,4 +123,3 @@ const Navbar = ({ setSearchQuery }) => {
 };
 
 export default Navbar;
-

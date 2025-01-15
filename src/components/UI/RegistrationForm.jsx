@@ -237,6 +237,7 @@ const AddRegistrationForm = () => {
               {entityObject.minplayersperteam}
             </span>
           </h3>
+          <div></div>
           <h3 className="second text-md mt-3">
             We will contact you, once payment is verified
           </h3>
@@ -378,6 +379,29 @@ const AddRegistrationForm = () => {
 
             {/* Payment Screenshot */}
             <div>
+              <div className="mb-5 border m-2 p-2">
+                <ul className="flex flex-col gap-2">
+                  <li className="flex justify-start items-center">
+                    <img
+                      src="../../ep.svg"
+                      alt="easypaisa"
+                      className="w-[7%] h-[7.5%]"
+                    />
+                    <span className="mx-2">0300-1231231</span>
+
+                    <span className="mx-4"> Ashad Abid</span>
+                  </li>
+                  <li className="flex justify-start items-center">
+                    <img
+                      src="../../sadapay.svg"
+                      alt="sadapay"
+                      className="w-[7%] h-[7.5%]"
+                    />
+                    <span className="mx-2">0300-1231231</span>
+                    <span className="mx-4"> Ashad Abid</span>
+                  </li>
+                </ul>
+              </div>
               <label className="block second font-semibold mb-2">
                 Upload Payment Screenshot
               </label>
