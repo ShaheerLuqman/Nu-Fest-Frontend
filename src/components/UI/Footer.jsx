@@ -31,11 +31,11 @@ const Footer = () => {
         </div>
 
         {/* Separator */}
-        <div className="my-2 border-t border-gray-500 my-4"></div>
+        <div className=" border-t border-gray-500 my-4"></div>
 
         {/* Headings Row */}
-        <div className="hidden md:grid grid-cols-1 sm:grid-cols-3 w-full gap-8 text-white text-sm mx-auto mt-5">
-          <div className="flex items-center justify-center">
+        <div className="hidden md:grid grid-cols-1 sm:grid-cols-3 gap-8 text-white text-sm max-w-4xl mx-auto mt-5">
+          <div className="flex justify-center items-center">
             <h3 className="text-lg font-bold underline">LOCATION</h3>
           </div>
           <div className="flex items-center justify-center">

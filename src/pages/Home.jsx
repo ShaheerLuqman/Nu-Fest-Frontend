@@ -65,7 +65,7 @@ function Home() {
           />
         </div>
       ) : ( */}
-      <div className="homepage">
+      <div className="homepage ">
         <div className="bg-first second">
           <Marquee>
             <span className="second text-lg tracking-widest">
