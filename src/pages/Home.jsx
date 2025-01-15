@@ -74,8 +74,13 @@ function Home() {
           </Marquee>
         </div> */}
 
-        <div className="z-0 my-16">
-          <Logo />
+        <div className="z-0 my-16 flex justify-center">
+          <img 
+            alt="Logo" 
+            src="https://i.ibb.co/DD9m7Fj/Logo.png" 
+            className="w-80 h-auto"
+            style={{ background: 'none' }} 
+          />
         </div>
         <div className="flex justify-center items-center w-full">
           <h2 className="second font-semibold mt-4 text-2xl">

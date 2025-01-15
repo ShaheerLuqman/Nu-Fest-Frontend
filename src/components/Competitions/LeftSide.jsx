@@ -19,7 +19,7 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
       {/* Desktop View */}
       <motion.div
         key={123124}
-        className="hidden md:block w-1/6 p-4 space-y-6"
+        className="hidden md:block w-1/6 p-4 space-y-6 bg-white sticky top-0 h-screen overflow-y-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -32,8 +32,8 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
             key={category.id}
             className={
               catName === category.name
-                ? "second p-3 rounded-lg w-full font-semibold transition duration-300"
-                : "first p-3 rounded-lg w-full  font-semibold transition duration-300"
+                ? "second bg-white p-3 rounded-lg w-full font-semibold transition duration-300"
+                : "first bg-white p-3 rounded-lg w-full font-semibold transition duration-300"
             }
             onClick={() => onCategoryClick(category.name)}
             whileHover={{ scale: 1.05 }}
@@ -50,7 +50,7 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
         </IconButton>
         <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
           <motion.div
-            className="w-64 p-4 space-y-6"
+            className="w-64 p-4 space-y-6 bg-white"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
@@ -63,8 +63,8 @@ const LeftSide = ({ categories, onCategoryClick, catName }) => {
                 key={category.id}
                 className={
                   catName === category.name
-                    ? "second p-3 rounded-lg w-full  transition duration-300"
-                    : "first p-3 rounded-lg w-full  transition duration-300"
+                    ? "second bg-white p-3 rounded-lg w-full transition duration-300"
+                    : "first bg-white p-3 rounded-lg w-full transition duration-300"
                 }
                 onClick={() => {
                   onCategoryClick(category.name);

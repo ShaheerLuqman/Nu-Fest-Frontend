@@ -8,7 +8,7 @@ const Navbar = ({ setSearchQuery, allow }) => {
   const location = useLocation();
 
   return (
-    <header className="w-full top-0 z-100">
+    <header className="w-full top-0 z-100 bg-white shadow rounded-b-xl">
       {/* Top Menu */}
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}

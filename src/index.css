@@ -110,3 +110,15 @@
   font-size: 12px;
   white-space: nowrap;
 }
+
+body {
+  background-color: rgba(255, 255, 255, 0.05); /* White background with more transparency */
+  background-image: linear-gradient(30deg, rgba(249, 161, 35, 0.3) 12%, transparent 12.5%, transparent 87%, rgba(249, 161, 35, 0.3) 87.5%, rgba(249, 161, 35, 0.3)), 
+                    linear-gradient(150deg, rgba(249, 161, 35, 0.3) 12%, transparent 12.5%, transparent 87%, rgba(249, 161, 35, 0.3) 87.5%, rgba(249, 161, 35, 0.3)), 
+                    linear-gradient(30deg, rgba(249, 161, 35, 0.3) 12%, transparent 12.5%, transparent 87%, rgba(249, 161, 35, 0.3) 87.5%, rgba(249, 161, 35, 0.3)), 
+                    linear-gradient(150deg, rgba(249, 161, 35, 0.3) 12%, transparent 12.5%, transparent 87%, rgba(249, 161, 35, 0.3) 87.5%, rgba(249, 161, 35, 0.3)), 
+                    linear-gradient(60deg, rgba(249, 161, 35, 0.3) 25%, transparent 25.5%, transparent 75%, rgba(249, 161, 35, 0.3) 75%, rgba(249, 161, 35, 0.3)), 
+                    linear-gradient(60deg, rgba(249, 161, 35, 0.3) 25%, transparent 25.5%, transparent 75%, rgba(249, 161, 35, 0.3) 75%, rgba(249, 161, 35, 0.3));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
