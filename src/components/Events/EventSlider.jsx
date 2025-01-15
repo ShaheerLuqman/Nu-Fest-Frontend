@@ -26,14 +26,14 @@ const EventSlider = ({ events }) => {
   if (events.length === 0) return null;
 
   return (
-    <div className="relative flex justify-center items-center bg-gray-100">
-      <div className="lg:w-1/2 md:w-full h-[40vh] flex items-center justify-center relative">
+    <div className="relative flex justify-center items-center bg-transparent">
+      <div className="lg:w-1/2 md:w-full h-[75vh]  flex items-center bg-transparent justify-center relative ">
         <img
-          src={events[featuredIndex]?.imageurl || "/default-event.jpg"}
+          src={events[featuredIndex]?.image_url || "/default-event.jpg"}
           alt={events[featuredIndex]?.event_name}
-          className="w-full h-full object-cover"
+          className="w-[100%] h-[100%] object-fit rounded-lg "
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/40 via-black/10 to-black/40" />
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/40 via-black/10 to-black/40" /> */}
         <div className="absolute bottom-8 left-8 text-white">
           <h2 className="text-4xl font-bold">
             {events[featuredIndex]?.event_name}
@@ -50,13 +50,13 @@ const EventSlider = ({ events }) => {
       </div>
 
       <button
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-3 hover:bg-black/60"
+        className="absolute left-[25%] top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-3 hover:bg-black/60"
         onClick={() => handleNavigation("left")}
       >
         <AiOutlineArrowLeft size={24} />
       </button>
       <button
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-3 hover:bg-black/60"
+        className="absolute right-1/4 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-3 hover:bg-black/60"
         onClick={() => handleNavigation("right")}
       >
         <AiOutlineArrowRight size={24} />

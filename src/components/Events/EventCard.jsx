@@ -28,7 +28,7 @@ const EventCard = ({ event }) => {
         className="bg-white border border-gray-300 rounded-lg shadow-lg p-4 flex flex-col items-center text-center"
       >
         <img
-          src={event.imageurl || "/default-event.jpg"}
+          src={event.image_url || "/default-event.jpg"}
           alt={event.event_name}
           className="w-full max-w-xs h-48 object-cover rounded-md mb-4"
         />

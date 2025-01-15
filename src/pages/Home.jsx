@@ -36,69 +36,63 @@ function Home() {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    // Check localStorage for the splash screen flag
     const hasSeenSplash = localStorage.getItem("hasSeenSplash");
 
     if (hasSeenSplash) {
-      // If flag exists, skip the splash screen
       setShowSplash(false);
     } else {
-      // If flag doesn't exist, show the splash screen
       const timer = setTimeout(() => {
         setShowSplash(false);
-        localStorage.setItem("hasSeenSplash", "true"); // Set the flag in localStorage
+        localStorage.setItem("hasSeenSplash", "true");
       }, 3000);
 
-      // Cleanup timeout on component unmount
       return () => clearTimeout(timer);
     }
   }, []);
 
   return (
     <>
-      {/* {showSplash ? (
-        <div className="relative splash-screen">
-          <img
-            alt="Logo"
-            src="../logo.svg"
-            className="z-0 absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-      ) : ( */}
-      <div className="homepage ">
-        {/* <div className="bg-transparent second">
-          <Marquee>
-            <span className="second text-lg tracking-widest">
-              ENTRANCE FEES APPLY FOR NON-REGISTERED ATTENDEES.
-            </span>
-          </Marquee>
-        </div> */}
-
+      <div className="homepage">
         <div className="z-0 my-16 flex justify-center">
           <img
             alt="Logo"
             src="https://i.ibb.co/DD9m7Fj/Logo.png"
-            className="w-80 h-auto"
+            className="w-40 h-auto sm:w-60 md:w-80"
             style={{ background: "none" }}
           />
         </div>
-        <div className="flex justify-center items-center w-full">
-          <h2 className="second font-semibold mt-4 text-2xl">
+        <div className="flex flex-col md:flex-row w-full justify-around items-center  mt-8 px-4">
+          <div className="text-center md:text-left md:ml-8">
+            <h2 className="text-3xl text-center md:text-5xl lg:text-6xl font-bold second">
+              PAST
+            </h2>
+            <h2 className="text-3xl md:text-5xl text-center lg:text-6xl font-bold second">
+              GLIMPSES
+            </h2>
+          </div>
+
+          <div className="w-full md:w-2/3 lg:w-1/2 mt-8 md:mt-0">
+            <EventsContainer events={events} />
+          </div>
+        </div>
+
+        <div className="my-24"> </div>
+
+        <div className="flex flex-col items-center w-full px-4">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center second">
             FEATURED COMPETITIONS
           </h2>
+          <div className="w-full mt-8">
+            <SlidingCardContainer competitions={competitions} />
+          </div>
         </div>
-        <SlidingCardContainer competitions={competitions} />
-      </div>
-      {/* <div className="flex justify-center items-center w-full">
-            <h2 className=" mt-4 text-2xl second font-semibold">EXPERIENCES</h2>
-          </div> */}
-      {/* <EventsContainer events={events} /> */}
 
-      {/* <CardDetails /> */}
-      {/* <div className="my-10"> </div> */}
-      {/* <SponsorCarousel sponsors={sponsors} /> */}
-      {/* )
-      } */}
+        <div className="my-10"></div>
+
+        {/* <div className="w-full mt-8 px-4">
+          <SponsorCarousel sponsors={sponsors} />
+        </div> */}
+      </div>
     </>
   );
 }

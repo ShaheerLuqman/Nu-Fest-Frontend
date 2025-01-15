@@ -13,9 +13,9 @@ const EventCard = ({ event }) => {
       {/* Image Section */}
       <div className="h-[85%] w-full bg-gray-100 flex items-center justify-center overflow-hidden rounded-t-md">
         <img
-          src={imageurl}
+          src={event.image_url}
           alt={event_name}
-          className="w-full h-full object-cover transition-transform duration-300"
+          className="w-full h-full object-fit transition-transform duration-300"
         />
       </div>
 
