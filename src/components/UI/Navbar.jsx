@@ -53,7 +53,7 @@ const Navbar = ({ setSearchQuery, allow }) => {
               EVENTS
             </Link> */}
             <Link
-              to="/"
+              to="/stall"
               className={`p-2 bg-opacity-90 rounded-xl font-semibold px-4 ${
                 location.pathname === "/stall" ? "second" : "first"
               } hover:text-orange-600 duration-150 no-underline`}
@@ -108,7 +108,8 @@ const Navbar = ({ setSearchQuery, allow }) => {
               EVENTS
             </Link> */}
             <Link
-              to="/"
+              to="/stall"
+              onClick={() => setIsBottomMenuOpen(false)}
               className={`p-2 bg-opacity-90 rounded-xl font-semibold px-4 mb-4 ${
                 location.pathname === "/stall" ? "second" : "first"
               } hover:text-orange-600 duration-150 no-underline`}
