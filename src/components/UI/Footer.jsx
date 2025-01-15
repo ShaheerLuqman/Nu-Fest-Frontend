@@ -35,13 +35,13 @@ const Footer = () => {
 
         {/* Headings Row */}
         <div className="hidden md:grid grid-cols-1 sm:grid-cols-3 w-full gap-8 text-white text-sm mx-auto mt-5">
-          <div className="flex items-center justify-around">
+          <div className="flex items-center justify-center">
             <h3 className="text-lg font-bold underline">LOCATION</h3>
           </div>
-          <div className="flex items-center justify-around">
+          <div className="flex items-center justify-center">
             <h3 className="text-lg font-bold underline">SOCIALS</h3>
           </div>
-          <div className="flex items-center justify-around">
+          <div className="flex items-center justify-center">
             <h3 className="text-lg font-bold underline">CONTACTS</h3>
           </div>
         </div>
