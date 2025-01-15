@@ -353,10 +353,10 @@ export const DataProvider = ({ children }) => {
 
   const [competitions, setCompetitions] = useState(competitionsData);
 
-  useEffect(() => {
-    // fetchCompetitions();
-    getEvents();
-  }, []);
+  // useEffect(() => {
+  //   fetchCompetitions();
+  //   getEvents();
+  // }, []);
   const fetchCompetitions = async () => {
     try {
       const response = await axios.get("/api/competitions/getcompetitions");

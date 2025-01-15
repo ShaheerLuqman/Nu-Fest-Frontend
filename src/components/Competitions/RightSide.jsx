@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CompetitionCard from "./CompetitionCard.jsx";
-import { motion } from "framer-motion";
-// import { Menu, Button, MenuItem } from "@mui/material";
+import { motion, AnimatePresence } from "framer-motion";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -15,7 +14,6 @@ const RightSide = ({
   categories,
   onCategoryClick,
 }) => {
-  useEffect(() => {}, [filteredCompetitions]);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleCategoryMenuOpen = (event) => {
@@ -30,14 +28,19 @@ const RightSide = ({
     onCategoryClick(categoryName);
     handleCategoryMenuClose();
   };
-  // const [anchorEl, setAnchorEl] =
-  //   (React.useState < null) | (HTMLElement > null);
+
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.95 },
   };
 
   return (
@@ -47,47 +50,6 @@ const RightSide = ({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* <div className="sm:hidden mb-6 w-full">
-        <Button
-          aria-controls="category-menu"
-          aria-haspopup="true"
-          onClick={handleCategoryMenuOpen}
-          fullWidth
-          variant="contained"
-          sx={{
-            color: "#f9a123",
-            background: "transparent",
-            fontWeight: "600",
-          }}
-        >
-          CATEGORIES
-        </Button>
-        <Menu
-          id="category-menu"
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleCategoryMenuClose}
-          fullWidth
-          style={{
-            fullWidth: "100%",
-            color: "#f9a123",
-          }}
-        >
-          {categories.map((category) => (
-            <MenuItem
-              key={category.id}
-              onClick={() => handleCategorySelect(category.name)}
-              fullWidth
-              style={{
-                fullWidth: "100%",
-                color: "#f9a123",
-              }}
-            >
-              {category.name}
-            </MenuItem>
-          ))}
-        </Menu>
-      </div> */}
       <div className="sm:hidden mb-6 w-full flex justify-center items-center">
         <Button
           id="fade-button"
@@ -95,15 +57,12 @@ const RightSide = ({
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
           onClick={handleClick}
-          // variant="contained"
           sx={{
-            backgroundColor: "white", // Orange background
-            color: "#f9a123", // White text
+            backgroundColor: "white",
+            color: "#f9a123",
             "&:hover": {
               backgroundColor: "#f9a123",
               color: "white",
-              width: "35vw", // Full width on mobile
-              // Darker orange on hover
             },
             fontWeight: "600",
           }}
@@ -119,11 +78,6 @@ const RightSide = ({
           open={open}
           onClose={handleClose}
           TransitionComponent={Fade}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
         >
           {categories.map((category) => (
             <MenuItem
@@ -137,10 +91,6 @@ const RightSide = ({
               {category.name}
             </MenuItem>
           ))}
-          {/* </Menu> */}
-          {/* <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
-          <MenuItem onClick={handleClose}>Logout</MenuItem> */}
         </Menu>
       </div>
       {selectedCategory ? (
@@ -153,11 +103,23 @@ const RightSide = ({
             />
           </div>
 
-          {/* Grid of Competitions */}
+          {/* Grid of Competitions with Animation */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {filteredCompetitions.map((competition, index) => (
-              <CompetitionCard key={index} competition={competition} />
-            ))}
+            <AnimatePresence>
+              {filteredCompetitions.map((competition) => (
+                <motion.div
+                  key={competition.id} // Ensure each card has a unique key
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ duration: 0.3 }}
+                  layout
+                >
+                  <CompetitionCard competition={competition} />
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
         </>
       ) : (

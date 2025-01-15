@@ -51,7 +51,7 @@ const Competitions = () => {
         (competition) => competition.category_name === categoryName
       );
       setFilteredCompetitions(filtered);
-      console.log(filtered);
+      // console.log(filtered);
     }
   };
 

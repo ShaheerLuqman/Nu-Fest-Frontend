@@ -15,8 +15,10 @@ const CompetitionDetailsModal = ({ competition, open, onClose }) => {
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
       {/* Header Section with Icon and Title */}
       <DialogTitle className="flex items-center w-full">
-        <div className="space-y-2 w-full flex justify-between items-center">
-          <h2 className="font-bold text-3xl">{competition.competition_name}</h2>
+        <div className="space-y-2 w-full flex justify-center items-center">
+          <h2 className="font-bold text-3xl second">
+            {competition.competition_name}
+          </h2>
           <Button
             onClick={onClose}
             sx={{
@@ -24,6 +26,9 @@ const CompetitionDetailsModal = ({ competition, open, onClose }) => {
               "&:hover": {
                 backgroundColor: "transparent",
               },
+              position: "absolute",
+              right: "10px",
+              top: "10px",
             }}
           >
             <AiOutlineCloseCircle size={24} />
@@ -43,7 +48,7 @@ const CompetitionDetailsModal = ({ competition, open, onClose }) => {
           <img
             src={competition.imageurl}
             alt={competition.competition_name}
-            className="rounded-lg w-full object-cover"
+            className="rounded-lg w-full object-cover "
           />
         </motion.div>
 
@@ -54,23 +59,35 @@ const CompetitionDetailsModal = ({ competition, open, onClose }) => {
           transition={{ duration: 0.6 }}
           className="flex-1"
         >
-          <div className="space-y-6 text-gray-700">
+          <div className="space-y-6 text-gray-700 w-full">
             {/* Date Section */}
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <p className="text-2xl font-bold">DATE</p>
               <p className="text-xl">
                 {new Date(competition.date).toLocaleDateString()}
               </p>
-            </div>
+            </div> */}
 
             {/* Location Section */}
-            <div className="space-y-2">
-              <p className="text-2xl font-bold">LOCATION</p>
-              <p className="text-xl">{competition.location || "FAST NUCES"}</p>
+            <div className="flex justify-around space-x-6">
+              <div className="space-2 flex flex-col justify-center text-center">
+                <p className="text-2xl font-bold">PRICE</p>
+                <p className="text-xl">{competition.price}</p>
+              </div>
+              <div className="space-2 flex flex-col justify-center text-center">
+                <p className="text-2xl font-bold flex flex-col justify-center text-center">
+                  MIN
+                </p>
+                <p className="text-xl">{competition.minplayersperteam}</p>
+              </div>
+              <div className="space-2 flex flex-col justify-center text-center">
+                <p className="text-2xl font-bold">MAX</p>
+                <p className="text-xl">{competition.maxplayersperteam}</p>
+              </div>
             </div>
 
             {/* Description Section */}
-            <div className="space-y-2">
+            <div className="space-y-2 flex justify-center">
               <p className="text-2xl font-bold">DESCRIPTION</p>
               <p className="text-xl">
                 {competition.description || "No description available."}
