@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 const SlidingEventContainer = ({ events }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
