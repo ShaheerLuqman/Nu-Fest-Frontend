@@ -379,28 +379,11 @@ const AddRegistrationForm = () => {
 
             {/* Payment Screenshot */}
             <div>
-              <div className="mb-5 border m-2 p-2">
-                <ul className="flex flex-col gap-2">
-                  <li className="flex justify-start items-center">
-                    <img
-                      src="../../ep.svg"
-                      alt="easypaisa"
-                      className="w-[7%] h-[7.5%]"
-                    />
-                    <span className="mx-2">0300-1231231</span>
-
-                    <span className="mx-4"> Ashad Abid</span>
-                  </li>
-                  <li className="flex justify-start items-center">
-                    <img
-                      src="../../sadapay.svg"
-                      alt="sadapay"
-                      className="w-[7%] h-[7.5%]"
-                    />
-                    <span className="mx-2">0300-1231231</span>
-                    <span className="mx-4"> Ashad Abid</span>
-                  </li>
-                </ul>
+              <div className="mb-5 border m-2 p-2 flex flex-col">
+                <img src="../../ABL.svg" className="w-[25%] h-[25%]" />
+                <p>Name: Ashhad Abid Akhtar</p>
+                <p>IBAN: PK41ABPA0010116629260019</p>
+                <p>ACC NO: 04580010116629260019</p>
               </div>
               <label className="block second font-semibold mb-2">
                 Upload Payment Screenshot
