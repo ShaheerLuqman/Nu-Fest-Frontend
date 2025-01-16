@@ -379,11 +379,16 @@ const AddRegistrationForm = () => {
 
             {/* Payment Screenshot */}
             <div>
-              <div className="mb-5 border m-2 p-2 flex flex-col">
-                <img src="../../ABL.svg" className="w-[25%] h-[25%]" />
-                <p>Name: Ashhad Abid Akhtar</p>
-                <p>IBAN: PK41ABPA0010116629260019</p>
-                <p>ACC NO: 04580010116629260019</p>
+              <div className="mb-5 border m-2 p-2 flex ">
+                <img
+                  src="../../ABL.svg"
+                  className="w-[25%] h-[25%] flex justify-start items-center"
+                />
+                <div>
+                  <p>Name: Ashhad Abid Akhtar</p>
+                  <p>IBAN: PK41ABPA0010116629260019</p>
+                  <p>ACC NO: 04580010116629260019</p>
+                </div>
               </div>
               <label className="block second font-semibold mb-2">
                 Upload Payment Screenshot
