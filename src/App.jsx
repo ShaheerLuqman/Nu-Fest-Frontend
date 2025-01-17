@@ -12,7 +12,6 @@ import Footer from "./components/UI/Footer.jsx";
 
 function App() {
   axios.defaults.baseURL = `${import.meta.env.VITE_BASEURL}`;
-  console.log(axios.defaults.baseURL);
   return (
     <div>
       <DataProvider>
@@ -23,7 +22,10 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/stall" element={<Stall />} />
           <Route path="*" element={<Navigate to="/" />} />
-          <Route path="/:competition_name/register" element={<AddRegistrationForm />} />
+          <Route
+            path="/:competition_name/register"
+            element={<AddRegistrationForm />}
+          />
         </Routes>
         <Footer />
       </DataProvider>
