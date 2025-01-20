@@ -14,7 +14,8 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-second opacity-95 pb-3 pt-10"
+      // className="bg-second opacity-95 pb-3 pt-10"
+      className="bottom-0 left-0 w-full bg-second  opacity-95 pb-3 pt-10"
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -60,8 +61,11 @@ const Footer = () => {
                 style={{ textDecoration: "none" }}
               >
                 <i className="fa-solid fa-location-dot fa-xl hover:text-orange-200 mb-4"></i>
-                <span>FAST NUCES, Karachi<br />
-                St-4, Sector 17-D, NH 5, Karachi, Karachi City, Sindh</span>
+                <span>
+                  FAST NUCES, Karachi
+                  <br />
+                  St-4, Sector 17-D, NH 5, Karachi, Karachi City, Sindh
+                </span>
               </a>
             </div>
           </div>

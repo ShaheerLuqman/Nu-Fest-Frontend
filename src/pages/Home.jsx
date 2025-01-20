@@ -54,7 +54,21 @@ function Home() {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
-        className="flex flex-col md:flex-row w-full justify-around items-center mt-8 px-4"
+        className="flex flex-col items-center w-full px-4 my-24"
+      >
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center second">
+          FEATURED COMPETITIONS
+        </h2>
+        <div className="w-full mt-8">
+          <SlidingCardContainer competitions={competitions} />
+        </div>
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        className="flex flex-col md:flex-row w-full mb-10 justify-around items-center mt-8 px-4"
       >
         <div className="text-center md:text-left md:ml-8">
           <h2 className="text-3xl text-center md:text-5xl lg:text-6xl font-bold second">
@@ -67,21 +81,6 @@ function Home() {
 
         <div className="w-full md:w-2/3 lg:w-1/2 mt-8 md:mt-0">
           <EventsContainer events={events} />
-        </div>
-      </motion.div>
-
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        className="flex flex-col items-center w-full px-4 my-24"
-      >
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center second">
-          FEATURED COMPETITIONS
-        </h2>
-        <div className="w-full mt-8">
-          <SlidingCardContainer competitions={competitions} />
         </div>
       </motion.div>
     </div>
