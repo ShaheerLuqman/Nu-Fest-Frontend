@@ -229,6 +229,7 @@ const AddRegistrationForm = () => {
         const response = await axios.post("/api/image/upload", img, {
           headers: { "Content-Type": "multipart/form-data" },
         });
+        console.clear(); // Clears the console
 
         const filteredParticipants = formData.participants.filter(
           (participant) => participant.email?.trim() && participant.name?.trim()
@@ -250,6 +251,13 @@ const AddRegistrationForm = () => {
             headers: { "Content-Type": "application/json" },
           }
         );
+        console.clear(); // Clears the console
+
+        if (res.status == 500) {
+          toast.error(
+            "Some participant's email already exists in another team for this competition."
+          );
+        }
 
         setProgress(100);
         toast.success("Registration successful for the competition!");
@@ -258,6 +266,7 @@ const AddRegistrationForm = () => {
         const response = await axios.post("/api/image/upload", img, {
           headers: { "Content-Type": "multipart/form-data" },
         });
+        console.clear(); // Clears the console
 
         const finalData = {
           ...teamLeader,
@@ -273,6 +282,7 @@ const AddRegistrationForm = () => {
             headers: { "Content-Type": "application/json" },
           }
         );
+        console.clear(); // Clears the console
 
         if (res.status === 201) {
           setProgress(100);
@@ -284,7 +294,7 @@ const AddRegistrationForm = () => {
     } catch (error) {
       setLoading(false);
       setProgress(0);
-
+      console.clear();
       switch (error.status) {
         case 306:
           toast.error(
