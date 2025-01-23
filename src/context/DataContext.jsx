@@ -167,7 +167,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 4,
       price: 1000,
       category_id: 1,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Esports",
     },
     {
@@ -180,7 +180,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 1000,
       category_id: 1,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Esports",
     },
     {
@@ -193,7 +193,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 5,
       price: 2500,
       category_id: 1,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Esports",
     },
     {
@@ -206,7 +206,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 1000,
       category_id: 1,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Esports",
     },
     {
@@ -219,7 +219,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 5,
       price: 8000,
       category_id: 2,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Sports",
     },
     {
@@ -232,7 +232,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 1000,
       category_id: 2,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Sports",
     },
     {
@@ -245,7 +245,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 1000,
       category_id: 2,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Sports",
     },
     {
@@ -258,7 +258,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 5,
       price: 8000,
       category_id: 2,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Sports",
     },
     {
@@ -271,7 +271,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 500,
       category_id: 3,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Extracurricular",
     },
     {
@@ -284,7 +284,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 50,
       price: 3000,
       category_id: 3,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Extracurricular",
     },
     {
@@ -297,7 +297,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 500,
       category_id: 3,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Extracurricular",
     },
     {
@@ -310,7 +310,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 1000,
       category_id: 4,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Demanding",
     },
     {
@@ -323,7 +323,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 1500,
       category_id: 4,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Demanding",
     },
     {
@@ -336,7 +336,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 5,
       price: 6000,
       category_id: 4,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Demanding",
     },
     {
@@ -349,7 +349,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 2,
       price: 1000,
       category_id: 4,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Demanding",
     },
     {
@@ -362,7 +362,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 500,
       category_id: 4,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Demanding",
     },
     {
@@ -376,7 +376,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 500,
       category_id: 4,
-      date: "2025-11-11",
+     date: "11-02-2025",
       category_name: "Demanding",
     },
     {
@@ -389,7 +389,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 500,
       category_id: 4,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Demanding",
     },
     {
@@ -402,7 +402,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 500,
       category_id: 4,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Demanding",
     },
     {
@@ -415,7 +415,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 500,
       category_id: 4,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Demanding",
     },
     {
@@ -428,7 +428,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 1500,
       category_id: 5,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Digital",
     },
     {
@@ -441,7 +441,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 1500,
       category_id: 5,
-      date: "2025-11-11",
+     date: "11-02-2025",
       category_name: "Digital",
     },
     {
@@ -454,7 +454,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 500,
       category_id: 5,
-      date: "2025-11-11",
+     date: "11-02-2025",
       category_name: "Digital",
     },
     {
@@ -467,7 +467,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 500,
       category_id: 6,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Literary",
     },
     {
@@ -480,7 +480,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 4,
       price: 1000,
       category_id: 6,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Literary",
     },
     {
@@ -493,7 +493,7 @@ export const DataProvider = ({ children }) => {
       minplayersperteam: 1,
       price: 250,
       category_id: 6,
-      date: "2025-11-11",
+      date: "11-02-2025",
       category_name: "Literary",
     },
   ];
