@@ -496,6 +496,19 @@ export const DataProvider = ({ children }) => {
       date: "11-02-2025",
       category_name: "Literary",
     },
+    {
+      id: 27,
+      competition_name: "Formula 1",
+      description: " ",
+      number_of_teams: 0,
+      imageurl: "https://i.ibb.co/j9mbKzLz/Screenshot-from-2025-02-08-18-46.png",
+      maxplayersperteam: 1,
+      minplayersperteam: 1,
+      price: 500,
+      category_id: 4,
+      date: "11-02-2025",
+      category_name: "Demanding",
+    }
   ];
 
   const [competitions, setCompetitions] = useState(competitionsData);

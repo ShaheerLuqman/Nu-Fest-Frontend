@@ -4,6 +4,7 @@ import SlidingCardContainer from "../components/UI/SlidingCardContainer.jsx";
 import Logo from "../components/UI/Logo.jsx";
 import DataContext from "../context/createContext.js";
 import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 
 function Home() {
   const { competitions } = useContext(DataContext);
@@ -34,6 +35,14 @@ function Home() {
 
   return (
     <div className="homepage">
+      <Marquee className="z-10 text-2xl flex justify-around text-center first bg-second" speed={75}>
+        <div className="flex items-center">
+          <span className="text-white">SPECIAL COLAB</span>
+          <span className="mx-4"> </span>
+          <span className="first">FORMULA 1 SIMULATION</span>
+          <span className="mx-24"> </span>
+        </div>
+      </Marquee>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -83,6 +92,7 @@ function Home() {
           <EventsContainer events={events} />
         </div>
       </motion.div>
+      
     </div>
   );
 }
