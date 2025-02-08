@@ -39,8 +39,12 @@ function Home() {
         <div className="flex items-center">
           <span className="text-white">SPECIAL COLAB</span>
           <span className="mx-4"> </span>
-          <span className="first">FORMULA 1 SIMULATION</span>
-          <span className="mx-24"> </span>
+          <span className="first">NUFEST x NUST</span>
+          <span className="mx-4"> </span>
+          <span className="text-white">FORMULA 1 SIMULATION</span>
+          
+          <span className="mx-4"> </span>
+
         </div>
       </Marquee>
       <motion.div
